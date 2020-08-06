@@ -36,10 +36,9 @@ burger.discount = function(person)
   if((person = "teacher" )|| (person = "student")) {
     return burger.price*0.75;
   }else {
-    if(person = "public")
-    {
+   
       return burger.price*0.90;
-    }
+    
   }
 }
 console.log(burger.discount("teacher"))
@@ -84,7 +83,7 @@ and should return a string in the format `{name} gave the restaurant a {rating},
 */
 function getReviewByIndex(reviews, index) {
   
-  return (reviews[index].name + 'gave the restaurant a '+ reviews[index].rating + ' and their feed back was: ' + reviews[index].feedback)  
+  return (reviews[index].name + ' gave the restaurant a '+ reviews[index].rating + ' and their feed back was: ' + reviews[index].feedback)  
   }
   
   console.log(getReviewByIndex(reviews,4))
@@ -98,17 +97,14 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(index) {
-    if(index == 7)
-    {
-      return(reviews[index].name + 'gave the restaurant a '+ reviews[index].rating + ' and their feed back was: ' + reviews[index].feedback)
-    }else
-    {
-      return "not a recent review"
-    }
-  } 
+function getLastReview(arr) {
 
-  console.log(getLastReview(7))
+  var lastOne = arr.length - 1;
+    
+      return(arr[lastOne].name + ' gave the restaurant a '+ arr[lastOne].rating + ' and their feed back was: ' + arr[lastOne].feedback)
+    
+}
+  console.log(getLastReview(reviews))
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
